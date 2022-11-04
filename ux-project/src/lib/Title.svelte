@@ -9,7 +9,6 @@
 
  <style>
 .navbar {
-    width: 100vw;
     background: #adadad;
     padding: 1rem 0;
     margin-bottom: 2rem;
@@ -19,5 +18,4 @@
     margin: 0;
     margin-left: 1rem;
 }
- 
  </style>

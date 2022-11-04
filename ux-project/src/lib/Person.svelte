@@ -1,49 +1,62 @@
 <script>
-
+    export let person;
 </script>
 
-<div class="personWrapper"> 
-    <img src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" alt="The rock" class="profilePic">
-    <p class="lastName">Last name</p>
-    <p class="firstName">First name</p>
+<div class="personWrapper">
+    <div class="picwrapper">
+        <img src={person.picture.thumbnail} alt="The rock" class="profilePic" />
+    </div>
+    <div class="namewrapper">
+        <p>{person.name.first} {person.name.last}</p>
+    </div>
     <select class="markSelector">
-        <option disabled selected value="0"></option>
-        <option value="1">Present</option>
-        <option value="2">Online</option>
-        <option value="3">Absent</option>
-        <option value="5">Late</option>
-        <option value="4">Explained</option>
-        <option value="6">Sick</option>
-        <option value="7">Class canceled</option>
+        <option disabled selected value="0" />
+        <option value="1" class="selector">Present</option>
+        <option value="2" class="selector">Online</option>
+        <option value="3" class="selector">Absent</option>
+        <option value="5" class="selector">Late</option>
+        <option value="4" class="selector">Explained</option>
+        <option value="6" class="selector">Sick</option>
+        <option value="7" class="selector">Class canceled</option>
     </select>
 </div>
 
 <style>
-.personWrapper{
-    display: flex;
-    background-color: #d1d1d1;
-    margin-bottom: 10px;
-}
+    .personWrapper {
+        display: flex;
+        justify-content: space-around;
+        background-color: #d1d1d1;
+        margin-bottom: 10px;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-.profilePic{
-    max-width: 3.5rem;
-    max-height: 3.5rem;
-    border-radius: 50%;
-}
+    .namewrapper {
+        display: flex;
+        flex: 1.5;
+        align-self: center;
+    }
 
-.firstName{
-    margin-left: .5vw;
-}
+    .picwrapper {
+        flex: 1;
+    }
 
-.lastName{
-    margin-left: 3rem;
-}
+    .profilePic {
+        max-width: 3.5rem;
+        max-height: 3.5rem;
+        border-radius: 50%;
+    }
 
-.markSelector {
-    margin-top: 17px;
-    max-height: 3vh;
-    max-width: 10vw;
-    margin-left: 1rem;
-    width: 20vw;
-}
+    .markSelector {
+        font-size: 22px;
+    }
+
+    .selector {
+        font-size: 18px;
+    }
+    .d {
+        display: flex;
+        flex: 1;
+    }
 </style>

@@ -1,16 +1,25 @@
 <script>
    import Person from "../lib/Person.svelte";
+   import {HISTORY} from '../assets/attendanceData'
+
+
+        const response = fetch("https://randomuser.me/api/?results=25&nat=GB,NZ,US,AU");
+        let datares = [];
+        response.then(res => {
+            res.json().then(data => {
+                datares = data.results
+                console.log(data.results)
+            })
+        });
+
 </script>
   
 <div class="container">
-    <Person />
-    <Person />
-    <Person />
-    <Person />
-    <Person />
-    <Person />
-    <Person />
-    <Person />
+
+    {#each datares as person, index}
+        <Person person={person} />
+    {/each}
+
 </div>
 
 <style>
