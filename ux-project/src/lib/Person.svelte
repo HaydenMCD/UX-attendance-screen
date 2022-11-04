@@ -55,8 +55,4 @@
     .selector {
         font-size: 18px;
     }
-    .d {
-        display: flex;
-        flex: 1;
-    }
 </style>
