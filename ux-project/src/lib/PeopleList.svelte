@@ -1,5 +1,6 @@
 <script>
     import Person from "../lib/Person.svelte";
+    import SubmitButton from "./submitButton.svelte";
 
     // 25 random people fetched from the api, this data is then formatted into json.
     const response = fetch(
@@ -19,14 +20,21 @@
     {#each datares as person, i}
         <Person {person} {i} />
     {/each}
+    <SubmitButton />
 </div>
 
 <style>
     .container {
         border: solid black 1px;
-        padding: 2vw;
+        padding: 1rem 2vw 1rem 2vw;
         width: 50vw;
         margin: 0 auto;
         min-width: 580px;
+        margin-bottom: 2rem;
+    }
+    .container:after {
+        content: "";
+        clear: both;
+        display: table;
     }
 </style>
