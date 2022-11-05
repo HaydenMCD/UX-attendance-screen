@@ -1,33 +1,21 @@
 <script>
 import { HISTORY } from "../assets/attendanceData";
 export let i
-// let session1 = [];
-// let session2 = [];
 
-// let currentHistory = HISTORY[i].history
-
-// for (var x = 0; x <= currentHistory.length; x+2) {
-
-// }
-
-// for (var x = 0; x <= currentHistory.length; x + 2) {
-//     session1.push(HISTORY[i].history[x])
-// }
-
-// console.log(session1)
-
+// Adding person history to array, then looping through the array to add seperators between each entry
 let historyArray = HISTORY[i].history;
-let test = "|";
+let finalData = "|";
 historyArray.forEach(element => {
-    test = test + " " + element + " |"
+    finalData = finalData + " " + element + " |"
 });
-
 
 </script>
 
+<!-- Printing out the contents of the -->
 <p class="history">
-    {test}
+    {finalData}
 </p>
+
 
 <style>
 .history {
