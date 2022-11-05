@@ -2,8 +2,6 @@
     export let person;
     export let i;
     import AttendanceHistory from "./attendanceHistory.svelte";
-    import { HISTORY } from "../assets/attendanceData";
-
 </script>
 
 <div class="personWrapper">
@@ -14,6 +12,7 @@
         <p>{person.name.first} {person.name.last}</p>
     </div>
 
+    <!-- displays the attendance history for a given person -->
     <AttendanceHistory {i}/>
 
     <select class="markSelector">
