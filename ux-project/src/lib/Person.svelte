@@ -1,5 +1,9 @@
 <script>
     export let person;
+    export let i;
+    import AttendanceHistory from "./attendanceHistory.svelte";
+    import { HISTORY } from "../assets/attendanceData";
+
 </script>
 
 <div class="personWrapper">
@@ -9,6 +13,9 @@
     <div class="namewrapper">
         <p>{person.name.first} {person.name.last}</p>
     </div>
+
+    <AttendanceHistory {i}/>
+
     <select class="markSelector">
         <option disabled selected value="0" />
         <option value="1" class="selector">Present</option>
