@@ -15,7 +15,7 @@
     <!-- displays the attendance history for a given person -->
     <AttendanceHistory {i}/>
 
-    <select class="markSelector">
+    <select class="markSelector" id="selector">
         <option disabled selected value="0" />
         <option value="1" class="selector">Present</option>
         <option value="2" class="selector">Online</option>
