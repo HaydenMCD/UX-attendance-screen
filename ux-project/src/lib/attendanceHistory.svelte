@@ -20,5 +20,6 @@
         display: flex;
         flex: 2;
         font-size: 18px;
+        margin-right: 2rem;
     }
 </style>
