@@ -28,7 +28,7 @@
         <option value="5" class="selector">Late</option>
         <option value="4" class="selector">Explained</option>
         <option value="6" class="selector">Sick</option>
-        <option value="7" class="selector">Class canceled</option>
+        <option value="7" class="selector">Class cancelled</option>
     </select>
 
     <button class="fillAllBtn">Fill All</button>
