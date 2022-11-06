@@ -1,6 +1,7 @@
 <script>
     export let person;
     export let i;
+    export let value;
     import AttendanceHistory from "./attendanceHistory.svelte";
     import Modal from "svelte-simple-modal";
     import Content from "./content.svelte";
@@ -14,7 +15,7 @@
     <!-- displays the attendance history for a given person -->
     <AttendanceHistory {i} />
 
-    <select class="markSelector" id="selector" required>
+    <select class="markSelector" id="selector" bind:value required>
         <option disabled selected value="0" />
         <option value="1" class="selector">Present</option>
         <option value="2" class="selector">Online</option>

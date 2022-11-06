@@ -16,14 +16,24 @@
             console.log(data.results);
         });
     });
+
+    let selectedOptions = []
+    $: console.log('selectedOptions', selectedOptions)
+
+    let fillAllWith
+
+    function fillAll(event) {
+        selectedOptions = selectedOptions.fill(fillAllWith)
+    }
+
 </script>
 
 <div class="container">
     <div class="fillWrapper">
                 <!-- To be implimented -->
-        <button class="fillAllBtn">Fill All</button>
+        <button class="fillAllBtn" on:click={fillAll}>Fill All</button>
 
-        <select class="markSelector" id="fillSelector">
+        <select class="markSelector" id="fillSelector" bind:value={fillAllWith}>
             <option disabled selected value="0" />
             <option value="1" class="selector">Present</option>
             <option value="2" class="selector">Online</option>
@@ -37,7 +47,7 @@
     </div>
     <!-- i is used to make sure the correct attendance data is retrieved. i gets incremented for each person -->
     {#each datares as person, i}
-        <Person {person} {i} />
+        <Person {person} {i} bind:value={selectedOptions[i]} />
     {/each}
     <SubmitButton />
 </div>
