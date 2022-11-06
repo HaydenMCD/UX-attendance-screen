@@ -11,7 +11,7 @@
 <div class="picwrapper">
     <img
         src={person.picture.thumbnail}
-        alt="The rock"
+        alt="Student"
         class="profilePic"
         on:click={showModal}
         on:keypress={showModal}
@@ -51,6 +51,6 @@
         font-weight: 400;
     }
     .name:hover {
-        cursor: pointer; 
+        cursor: pointer;
     }
 </style>

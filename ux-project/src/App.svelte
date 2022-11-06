@@ -5,8 +5,3 @@
 
 <Title />
 <PeopleList />
-
-
-<style>
-
-</style>

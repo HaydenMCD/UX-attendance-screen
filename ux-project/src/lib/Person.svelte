@@ -4,10 +4,6 @@
     import AttendanceHistory from "./attendanceHistory.svelte";
     import Modal from "svelte-simple-modal";
     import Content from "./content.svelte";
-
-    function showAlert() {
-        alert("This is the profile of " + person.name.first);
-    }
 </script>
 
 <div class="personWrapper">

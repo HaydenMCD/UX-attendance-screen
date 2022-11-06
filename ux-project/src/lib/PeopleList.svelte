@@ -16,11 +16,6 @@
             console.log(data.results);
         });
     });
-
-    function fillAll() {
-        console.log(selectorValue)
-    }
-
 </script>
 
 <div class="container">
@@ -34,8 +29,8 @@
         <option value="6" class="selector">Sick</option>
         <option value="7" class="selector">Class canceled</option>
     </select>
-    
-    <button class="fillAllBtn" on:click={fillAll}>Fill All</button>
+
+    <button class="fillAllBtn">Fill All</button>
 
     <!-- i is used to make sure the correct attendance data is retrieved. i gets incremented for each person -->
     {#each datares as person, i}
