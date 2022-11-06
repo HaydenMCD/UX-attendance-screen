@@ -6,16 +6,16 @@
 
 <div class="personWrapper">
     <div class="picwrapper">
-        <img src={person.picture.thumbnail} alt="The rock" class="profilePic" />
+        <a href="/"><img src={person.picture.thumbnail} alt="The rock" class="profilePic" /></a>
     </div>
     <div class="namewrapper">
-        <p>{person.name.first} {person.name.last}</p>
+        <h1><a href="/" class="nameLink">{person.name.first} {person.name.last}</a></h1>
     </div>
 
     <!-- displays the attendance history for a given person -->
     <AttendanceHistory {i}/>
 
-    <select class="markSelector" id="selector">
+    <select class="markSelector" id="selector" required>
         <option disabled selected value="0" />
         <option value="1" class="selector">Present</option>
         <option value="2" class="selector">Online</option>
@@ -60,5 +60,16 @@
 
     .selector {
         font-size: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    .nameLink {
+        text-decoration: none;
+        color: blue;
     }
 </style>
