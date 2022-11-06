@@ -49,6 +49,7 @@
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
+        transform: translateX(-2vw);
     }
     .name:hover {
         cursor: pointer;
