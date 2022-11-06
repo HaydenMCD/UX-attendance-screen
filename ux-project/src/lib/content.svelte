@@ -19,7 +19,7 @@
 </div>
 
 <div class="namewrapper">
-    <h1 on:click={showModal} on:keypress={showModal}>
+    <h1 class="name" on:click={showModal} on:keypress={showModal}>
         {person.name.first}
         {person.name.last}
     </h1>
@@ -30,6 +30,9 @@
         max-width: 3.5rem;
         max-height: 3.5rem;
         border-radius: 50%;
+    }
+    .profilePic:hover {
+        cursor: pointer;
     }
 
     .namewrapper {
@@ -42,9 +45,12 @@
         flex: 1;
     }
 
-    h1 {
+    .name {
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
+    }
+    .name:hover {
+        cursor: pointer; 
     }
 </style>

@@ -10,11 +10,11 @@
 <div class="container">
     <img src={person.picture.large} alt="Student" class="profilePic" />
     <h2 class="name">{person.name.first} {person.name.last}</h2>
-    <h3 class="dob">Date of birth: {dob}</h3>
-    <h3 class="dob">Gender: {person.gender}</h3>
-    <h3 class="dob">Phone:  {person.phone}</h3>
-    <h3 class="dob">Cellphone: {person.cell}</h3>
-    <h3 class="dob">Nationality: {person.nat}</h3>
+    <h3 class="dob">Date of birth:  {dob}</h3>
+    <h3 class="gender">Gender:  {person.gender}</h3>
+    <h3 class="phone">Phone:  {person.cell}</h3>
+    <h3 class="email">Email:  {person.email}</h3>
+    <h3 class="nat">Nationality:  {person.nat}</h3>
 </div>
 
 <style>
