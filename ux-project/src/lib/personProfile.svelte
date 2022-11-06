@@ -1,4 +1,5 @@
 <script>
+    // Exports
     export let person;
 
     // Formatting the date to YYYY-MM-DD

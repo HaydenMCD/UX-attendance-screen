@@ -1,9 +1,12 @@
 <script>
+    // Imports
     import Person from "../lib/Person.svelte";
     import SubmitButton from "./submitButton.svelte";
 
+    // Variables
     let datares = [];
-    let selectorValue;
+    let selectedOptions = [];
+    let fillAllWith;
 
     // 25 random people fetched from the api, this data is then formatted into json.
     const response = fetch(
@@ -17,20 +20,13 @@
         });
     });
 
-    let selectedOptions = []
-    $: console.log('selectedOptions', selectedOptions)
-
-    let fillAllWith
-
     function fillAll(event) {
-        selectedOptions = selectedOptions.fill(fillAllWith)
+        selectedOptions = selectedOptions.fill(fillAllWith);
     }
-
 </script>
 
 <div class="container">
     <div class="fillWrapper">
-                <!-- To be implimented -->
         <button class="fillAllBtn" on:click={fillAll}>Fill All</button>
 
         <select class="markSelector" id="fillSelector" bind:value={fillAllWith}>
@@ -43,7 +39,6 @@
             <option value="6" class="selector">Sick</option>
             <option value="7" class="selector">Class cancelled</option>
         </select>
-
     </div>
     <!-- i is used to make sure the correct attendance data is retrieved. i gets incremented for each person -->
     {#each datares as person, i}
@@ -67,15 +62,15 @@
         clear: both;
         display: table;
     }
-    
-    .fillWrapper{
+
+    .fillWrapper {
         overflow: auto;
     }
 
     .markSelector {
         font-size: 22px;
         margin-bottom: 1rem;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         margin-top: 3px;
         float: right;
     }

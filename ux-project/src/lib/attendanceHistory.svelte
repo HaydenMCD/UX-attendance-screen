@@ -1,6 +1,9 @@
 <script>
-    import { HISTORY } from "../assets/attendanceData";
+    //Exports
     export let i;
+
+    // Imports
+    import { HISTORY } from "../assets/attendanceData";
 
     // Adding person history to array, then looping through the array to add seperators between each entry
     let historyArray = HISTORY[i].history;

@@ -1,6 +1,8 @@
 <script>
+    // Exports
     export let person;
 
+    // Imports
     import { getContext } from "svelte";
     import PersonProfile from "./personProfile.svelte";
 

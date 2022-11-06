@@ -1,13 +1,17 @@
 <script>
+    // Exports
     export let person;
     export let i;
     export let value;
+
+    // Imports
     import AttendanceHistory from "./attendanceHistory.svelte";
     import Modal from "svelte-simple-modal";
     import Content from "./content.svelte";
 </script>
 
 <div class="personWrapper">
+    <!-- Modal triggered when user clicks on person picture or name -->
     <Modal>
         <Content {person} />
     </Modal>
