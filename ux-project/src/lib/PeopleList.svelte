@@ -19,20 +19,22 @@
 </script>
 
 <div class="container">
-    <!-- To be implimented -->
-    <select class="markSelector" id="fillSelector" bind:value={selectorValue}>
-        <option disabled selected value="0" />
-        <option value="1" class="selector">Present</option>
-        <option value="2" class="selector">Online</option>
-        <option value="3" class="selector">Absent</option>
-        <option value="5" class="selector">Late</option>
-        <option value="4" class="selector">Explained</option>
-        <option value="6" class="selector">Sick</option>
-        <option value="7" class="selector">Class cancelled</option>
-    </select>
+    <div class="fillWrapper">
+                <!-- To be implimented -->
+        <button class="fillAllBtn">Fill All</button>
 
-    <button class="fillAllBtn">Fill All</button>
+        <select class="markSelector" id="fillSelector">
+            <option disabled selected value="0" />
+            <option value="1" class="selector">Present</option>
+            <option value="2" class="selector">Online</option>
+            <option value="3" class="selector">Absent</option>
+            <option value="5" class="selector">Late</option>
+            <option value="4" class="selector">Explained</option>
+            <option value="6" class="selector">Sick</option>
+            <option value="7" class="selector">Class cancelled</option>
+        </select>
 
+    </div>
     <!-- i is used to make sure the correct attendance data is retrieved. i gets incremented for each person -->
     {#each datares as person, i}
         <Person {person} {i} />
@@ -55,10 +57,17 @@
         clear: both;
         display: table;
     }
+    
+    .fillWrapper{
+        overflow: auto;
+    }
 
     .markSelector {
         font-size: 22px;
-        margin-bottom: 0.9rem;
+        margin-bottom: 1rem;
+        margin-right: .5rem;
+        margin-top: 3px;
+        float: right;
     }
 
     .selector {
@@ -73,14 +82,13 @@
         background-color: green;
         color: #fff;
         border-radius: 5px;
-        box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.25);
         cursor: pointer;
         outline: none;
         transition: 0.2s all;
+        float: right;
     }
 
     .fillAllBtn:active {
         transform: scale(0.95);
-        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.25);
     }
 </style>
