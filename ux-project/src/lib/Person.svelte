@@ -2,18 +2,21 @@
     export let person;
     export let i;
     import AttendanceHistory from "./attendanceHistory.svelte";
+    import Modal from "svelte-simple-modal";
+    import Content from "./content.svelte";
+
+    function showAlert() {
+        alert("This is the profile of " + person.name.first);
+    }
 </script>
 
 <div class="personWrapper">
-    <div class="picwrapper">
-        <a href="/"><img src={person.picture.thumbnail} alt="The rock" class="profilePic" /></a>
-    </div>
-    <div class="namewrapper">
-        <h1><a href="/" class="nameLink">{person.name.first} {person.name.last}</a></h1>
-    </div>
+    <Modal>
+        <Content {person} />
+    </Modal>
 
     <!-- displays the attendance history for a given person -->
-    <AttendanceHistory {i}/>
+    <AttendanceHistory {i} />
 
     <select class="markSelector" id="selector" required>
         <option disabled selected value="0" />
@@ -38,38 +41,11 @@
         padding-right: 1rem;
     }
 
-    .namewrapper {
-        display: flex;
-        flex: 1.5;
-        align-self: center;
-    }
-
-    .picwrapper {
-        flex: 1;
-    }
-
-    .profilePic {
-        max-width: 3.5rem;
-        max-height: 3.5rem;
-        border-radius: 50%;
-    }
-
     .markSelector {
         font-size: 22px;
     }
 
     .selector {
         font-size: 18px;
-    }
-
-    h1 {
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 400;
-    }
-
-    .nameLink {
-        text-decoration: none;
-        color: blue;
     }
 </style>
