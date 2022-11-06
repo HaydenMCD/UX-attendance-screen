@@ -1,6 +1,12 @@
 # Link to deployment
 https://ux-project.netlify.app/
 
+# Instructions on local deployment
+1. CD into /ux-project
+2. run `npm i`
+3. run `npm run dev`
+
+
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
